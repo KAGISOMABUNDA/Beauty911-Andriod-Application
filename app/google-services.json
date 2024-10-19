@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "496631529657",
+    "project_id": "theuniquebeauty911",
+    "storage_bucket": "theuniquebeauty911.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496631529657:android:a137388db81ffbcd155b68",
+        "android_client_info": {
+          "package_name": "com.example.beauty911"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYXIGCqz-n2DgHod-xsPIMVShF4p1FfSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
