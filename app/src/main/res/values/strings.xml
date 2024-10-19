@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Beauty911</string>
+    <string name="halo_description">A halo graphic representing beauty</string>
+    <string name="intro_women_description">An introductory image of a woman</string>
+    <string name="text_view">Welcome to Beauty911</string>
+    <string name="button_text">Get Started</string> <!-- Keep this line -->
+    <string name="exceptional_care_n_close_to_you">Exceptional care&#10;close to you</string>
 </resources>
