@@ -1,4 +1,4 @@
-package com.example.beauty911
+package com.example.beauty911.Activity
 
 import android.content.Intent
 import android.os.Bundle

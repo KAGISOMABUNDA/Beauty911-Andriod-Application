@@ -15,6 +15,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Enable Multidex
+        multiDexEnabled = true
     }
 
     buildTypes {
@@ -38,19 +41,29 @@ android {
 
     // Enable View Binding
     viewBinding {
-        enable = true
+        enable = true // Corrected line to enable View Binding
     }
 }
 
 dependencies {
-    implementation(libs.appcompat) // Using version catalog alias
-    implementation(libs.material) // Using version catalog alias
-    implementation(libs.coreKtx) // Using version catalog alias
-    implementation(libs.activityKtx) // Using version catalog alias
-    implementation(libs.constraintlayout) // Using version catalog alias
-    implementation(libs.glide) // Using version catalog alias
+    // Using version catalog for these dependencies
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.coreKtx)
+    implementation(libs.activityKtx)
+    implementation(libs.constraintlayout)
+    implementation(libs.glide)
 
-    testImplementation(libs.junit) // Using version catalog alias
-    androidTestImplementation(libs.extJUnit) // Using version catalog alias
-    androidTestImplementation(libs.espressoCore) // Using version catalog alias
+    // Firebase dependencies
+    implementation(platform("com.google.firebase:firebase-bom:32.0.0"))
+    implementation("com.google.firebase:firebase-database-ktx")
+    implementation("com.google.firebase:firebase-core")
+
+    // Multidex dependency
+    implementation("androidx.multidex:multidex:2.0.1")
+
+    // Testing dependencies
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.extJUnit)
+    androidTestImplementation(libs.espressoCore)
 }
