@@ -5,4 +5,5 @@
     <string name="text_view">Welcome to Beauty911</string>
     <string name="button_text">Get Started</string> <!-- Keep this line -->
     <string name="exceptional_care_n_close_to_you">Exceptional care&#10;close to you</string>
+    <string name="book_appointment">Book Appointment</string>
 </resources>
