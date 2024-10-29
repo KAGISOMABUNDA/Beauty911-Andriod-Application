@@ -1,5 +1,6 @@
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.application") version "8.7.1" apply true
+    id("org.jetbrains.kotlin.android") version "2.0.21" apply true
 }
 
 android {
@@ -14,6 +15,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Enable Multidex
+        multiDexEnabled = true
     }
 
     buildTypes {
@@ -25,19 +29,43 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    // Enable View Binding
+    viewBinding {
+        enable = true // Corrected line to enable View Binding
+    }
 }
 
 dependencies {
-
+    // Using version catalog for these dependencies
     implementation(libs.appcompat)
     implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-
+    implementation(libs.coreKtx)
+    implementation(libs.activityKtx)
+    implementation(libs.constraintlayout)
     implementation(libs.glide)
+
+    // Firebase dependencies
+    implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-database-ktx")
+    implementation("com.google.firebase:firebase-core")
+
+    // Multidex dependency
+    implementation("androidx.multidex:multidex:2.0.1")
+    implementation(libs.activity)
+
+    // Testing dependencies
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.extJUnit)
+    androidTestImplementation(libs.espressoCore)
 }
