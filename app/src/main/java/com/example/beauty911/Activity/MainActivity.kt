@@ -1,5 +1,6 @@
 package com.example.beauty911.Activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -34,6 +35,11 @@ class MainActivity : BaseActivity() {
                 progressBarTopDoctor.visibility= View.GONE
             })
             viewModel.loadCategory()
+
+            doctorListtxt.setOnClickListener {
+                startActivity(Intent(this@MainActivity,TopDoctorsActivity::class.java))
+            }
+
         }
     }
 
